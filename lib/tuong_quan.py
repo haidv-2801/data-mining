@@ -19,7 +19,7 @@ if __name__ == '__main__':
     print("nuy_a: ", nuy_a)
     print("nuy_b: ", nuy_b)
     res = (sum([round(a[i] * b[i], r) for i in range(0, n)]) - n * avg_b * avg_a) / (n * nuy_b * nuy_a)
-    print("r_ab: ", round(res, 3))
+    print("r_ab: ", round(res, r))
     if res < 0:
         print("Tương quan nghịch")
     elif res == 0:

@@ -129,12 +129,6 @@ class KPDL:
         tb.add_row(["v'"] + x_std)
         print(tb)
 
-        # df = pd.DataFrame(d, columns=[str(i) for i in range(-1, self.x_sz)])
-        # print(df)
-        # print("arr:", self.x_sorted)
-        # print("v':", x_std)
-        # print([str(i) for i in range(-1, self.x_sz)])
-
         # print(["v"]+self.x_sorted)
         # print(["v'"] + x_std)
         # ptb = PrettyTable()
