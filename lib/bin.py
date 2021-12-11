@@ -78,14 +78,14 @@ def equiwidth(arr1, m):
     smoothing(arri)
 
 
-# data to be binned
-data = sorted([9.1, 4.5, 5.3, 6.7, 6.5, 7.0, 6.0, 5.5, 7.0, 7.0, 8.5, 8.6])
-
-# no of bins
-m = 3
-
-print("equal frequency binning(depth)")
-equifreq(data, m)
-
-print("\n\nequal width binning(width)")
-equiwidth(data, 3)
+# # data to be binned
+# data = sorted([9.1, 4.5, 5.3, 6.7, 6.5, 7.0, 6.0, 5.5, 7.0, 7.0, 8.5, 8.6])
+#
+# # no of bins
+# m = 3
+#
+# print("equal frequency binning(depth)")
+# equifreq(data, m)
+#
+# print("\n\nequal width binning(width)")
+# equiwidth(data, 3)
