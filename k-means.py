@@ -32,7 +32,7 @@ def equal(x, y):
 
 if __name__ == '__main__':
 
-    n = ([(2.0, 10.0), (5.0, 8.0), (1.0, 2.0)])
+    n = ([(2, 10), (5, 8), (1, 2)])
     new_n = copy.copy(n)
     new_n.append((99999, 999999))
     _list = read_file(FILE_NAME)
