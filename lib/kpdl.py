@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import bin as b
+from lib import bin as  b
 from prettytable import PrettyTable
 
 import matplotlib.pyplot as plt

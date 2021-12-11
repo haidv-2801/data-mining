@@ -4,7 +4,7 @@ import copy
 import numpy as np
 from collections import defaultdict
 
-FILE_NAME = "kmeans_data.txt"
+FILE_NAME = "lib/kmeans_data.txt"
 
 
 def read_file(file):
