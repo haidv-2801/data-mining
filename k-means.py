@@ -18,9 +18,9 @@ def read_file(file):
 
 def dis(x, y):
     # mahatan
-    # return round(m.fabs(x[0] - x[1]) + m.fabs(y[0] - y[1]), 2)
+    return round(m.fabs(x[0] - y[0]) + m.fabs(x[1] - y[1]), 2)
     # khoang cach
-    return m.sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
+    # return m.sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
 
 
 def equal(x, y):
@@ -32,7 +32,7 @@ def equal(x, y):
 
 if __name__ == '__main__':
 
-    n = ([(2, 10), (5, 8), (1, 2)])
+    n = ([(2.0, 10.0), (5.0, 8.0), (1.0, 2.0)])
     new_n = copy.copy(n)
     new_n.append((99999, 999999))
     _list = read_file(FILE_NAME)
