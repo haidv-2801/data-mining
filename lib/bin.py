@@ -8,14 +8,14 @@ def smoothing(res):
     res_1 = copy.copy(res)
     for index, bin in enumerate(res_1):
         avg = np.average(np.array(bin))
-        avg = round(avg, 2)
+        avg = round(avg, 3)
         res_1[index] = [avg] * len(res_1[index])
     for index, bin in enumerate(res_1):
         print("bin{0}={1}".format(index + 1, bin))
     print("-median:(trung vị)")
     res_2 = copy.copy(res)
     for index, bin in enumerate(res_2):
-        median = np.median(np.array(bin))
+        median = round(np.median(np.array(bin)),3)
         res_2[index] = [median] * len(res_2[index])
     for index, bin in enumerate(res_2):
         print("bin{0}={1}".format(index + 1, bin))
@@ -55,33 +55,37 @@ def equifreq(arr1, m):
 # equal width
 def equiwidth(arr1, m):
     a = len(arr1)
-    w = int((max(arr1) - min(arr1)) / m)
+    w = round((max(arr1) - min(arr1)) / m, 3)
+    print("Width = ({0} - {1}) / {2} = {3}".upper().format(max(arr1), min(arr1), m, w))
     min1 = min(arr1)
     arr = []
     for i in range(0, m + 1):
-        arr = arr + [min1 + w * i]
+        arr = arr + [round(min1 + w * i, 3)]
+
+    arr[-1] = 10 ** 10
     arri = []
 
     for i in range(0, m):
         temp = []
         for j in arr1:
-            if j >= arr[i] and j <= arr[i + 1]:
+            if j >= arr[i] and j < arr[i + 1]:
                 temp += [j]
         arri += [temp]
+
     for index, bin in enumerate(arri):
         print("bin{0}={1}".format(index + 1, bin))
 
     smoothing(arri)
 
 
-# # data to be binned
-# data = [5, 10, 11, 13, 15, 35, 50, 55, 72, 92, 204, 215]
-#
-# # no of bins
-# m = 3
-#
-# print("equal frequency binning(depth)")
-# equifreq(data, m)
-#
-# print("\n\nequal width binning(width)")
-# equiwidth(data, 3)
+# data to be binned
+data = sorted([9.1, 4.5, 5.3, 6.7, 6.5, 7.0, 6.0, 5.5, 7.0, 7.0, 8.5, 8.6])
+
+# no of bins
+m = 3
+
+print("equal frequency binning(depth)")
+equifreq(data, m)
+
+print("\n\nequal width binning(width)")
+equiwidth(data, 3)
