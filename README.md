@@ -11,7 +11,7 @@
       + zscore: đã trong main.py
       + min_max_normalize.py file riêng
       + độ trung bình tuyệt đối do_tb_tuyet_doi_normalize.py file riêng (đã thêm)
-      + decimalScaling: chưa có
+      + decimalScaling: decimal_scaling.py (đã thêm) (không chép, dùng đối chiếu)
  - Ngoài ra có thể xem thêm các ảnh cách trình bày trong thư mục img cho đầy đủ
 
  - Để chạy được code
