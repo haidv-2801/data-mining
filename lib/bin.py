@@ -54,6 +54,7 @@ def equifreq(arr1, m):
 
 # equal width
 def equiwidth(arr1, m):
+    print("Tự viết thêm giới hạn của mỗi bin ở đây")
     a = len(arr1)
     w = round((max(arr1) - min(arr1)) / m, 3)
     print("Width = ({0} - {1}) / {2} = {3}".upper().format(max(arr1), min(arr1), m, w))
