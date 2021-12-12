@@ -7,31 +7,34 @@ def smoothing(res):
     print("-mean:(trung bình)")
     res_1 = copy.copy(res)
     for index, bin in enumerate(res_1):
-        avg = np.average(np.array(bin))
-        avg = round(avg, 3)
-        res_1[index] = [avg] * len(res_1[index])
+        if len(bin) > 0:
+            avg = np.average(np.array(bin))
+            avg = round(avg, 3)
+            res_1[index] = [avg] * len(res_1[index])
     for index, bin in enumerate(res_1):
         print("bin{0}={1}".format(index + 1, bin))
     print("-median:(trung vị)")
     res_2 = copy.copy(res)
     for index, bin in enumerate(res_2):
-        median = round(np.median(np.array(bin)),3)
-        res_2[index] = [median] * len(res_2[index])
+        if len(bin) > 0:
+            median = round(np.median(np.array(bin)),3)
+            res_2[index] = [median] * len(res_2[index])
     for index, bin in enumerate(res_2):
         print("bin{0}={1}".format(index + 1, bin))
     print("-boundaries:(biên)")
     res_3 = copy.copy(res)
 
     for index, bin in enumerate(res_3):
-        ma = np.max(bin)
-        mi = np.min(bin)
-        for index2, bin2 in enumerate(bin):
-            if bin2 - mi < ma - bin2:
-                bin[index2] = mi
-            elif bin2 - mi > ma - bin2:
-                bin[index2] = ma
-            else:
-                bin[index2] = mi
+        if len(bin) > 0:
+            ma = np.max(bin)
+            mi = np.min(bin)
+            for index2, bin2 in enumerate(bin):
+                if bin2 - mi < ma - bin2:
+                    bin[index2] = mi
+                elif bin2 - mi > ma - bin2:
+                    bin[index2] = ma
+                else:
+                    bin[index2] = mi
     for index, bin in enumerate(res_3):
         print("bin{0}={1}".format(index + 1, bin))
 

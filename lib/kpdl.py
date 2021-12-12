@@ -87,7 +87,7 @@ class KPDL:
         print("+) Q1 = {0}, Q2 = {1}, Q3 = {2}".format(Q1, Q2, Q3))
         print("+) IQR = Q3 - Q1 = {0}".format(Q3-Q1))
         print(
-            "+) Minimun = Q1-1.5*IQR = {Q1}-1.5*{IQR} = {minimum}, Maximun = Q3+ 1.5*IQR = {Q3}+1.5*{IQR} = {maximum}".format(
+            "+) Giới hạn dưới(minimum) = Q1-1.5*IQR = {Q1}-1.5*{IQR} = {minimum}, Giới hạn trên(maximum) = Q3+ 1.5*IQR = {Q3}+1.5*{IQR} = {maximum}".format(
                 minimum=minimum, maximum=maximum, Q1=Q1, Q3=Q3, IQR=IQR))
         print("+) Biểu đồ boxplot")
         ngoai_lai = [i if i < minimum or i > maximum else None for i in self.x]
