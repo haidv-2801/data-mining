@@ -85,6 +85,7 @@ class KPDL:
         maximum = mr(Q3 + 1.5 * IQR)
         print("+) min = {0}, max = {1}, n = {2}".format(_min, _max, _n))
         print("+) Q1 = {0}, Q2 = {1}, Q3 = {2}".format(Q1, Q2, Q3))
+        print("+) IQR = Q3 - Q1 = {0}".format(Q3-Q1))
         print(
             "+) Minimun = Q1-1.5*IQR = {Q1}-1.5*{IQR} = {minimum}, Maximun = Q3+ 1.5*IQR = {Q3}+1.5*{IQR} = {maximum}".format(
                 minimum=minimum, maximum=maximum, Q1=Q1, Q3=Q3, IQR=IQR))
