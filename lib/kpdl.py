@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 # round
-r = 2
+r = 10
 
 BIN_TYPE = {"EQUAL_WIDTH": 0, "EQUAL_DEPTH": 1}
 
@@ -38,7 +38,7 @@ class KPDL:
     def avg(self):
         if len(self.x) > 0:
             avg = np.average(self.x)
-            print("+) avg:", round(avg, r))
+            print("+) mean:", round(avg, r))
 
     def median(self):
         l = len(self.x)
@@ -123,7 +123,7 @@ class KPDL:
         print("=> σ = ", np.sqrt(nuy))
         print("Ta có : v1' = (v1 - avg) / σ = {0}".format(mr((self.x_sorted[0] - self.x_avg) / np.sqrt(nuy))))
         x_std = [mr((i - self.x_avg) / mr(np.sqrt(nuy))) for i in self.x_sorted]
-        cols = ["T"] + [str(i) for i in range(0, 12)]
+        cols = ["T"] + [str(i) for i in range(0, self.x_sz)]
         tb =  PrettyTable(cols)
         tb.add_row(["v"] + self.x_sorted)
         tb.add_row(["v'"] + x_std)
@@ -145,7 +145,9 @@ class KPDL:
 
     def run(self):
         print(str("-" * 50) + "begin " + self.name + str("-" * 50))
-        print("\na)")
+        print("n = ", self.x_sz)
+        print(self.x)
+        print("a)")
         self.showSorted()
         self.avg()
         self.median()
