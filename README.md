@@ -5,7 +5,7 @@
     + k-means.py
       + file đầu vào: kmeans_data.txt
     + bin.py (làm trơn thùng)
-      + nếu chạy riêng file này thì bỏ đoạn comment tham số bên dưới
+      + nếu chạy riêng file này thì bỏ  comment  đoạn code tham số bên dưới để tùy chỉnh tham số
     + tuong_quan.py (tương quan giữa 2 dãy)
     + Chuẩn hóa (4 loại chuẩn hóa)
       + zscore: đã trong main.py
