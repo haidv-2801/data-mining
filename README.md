@@ -10,6 +10,6 @@
     + Chuẩn hóa
       + zscore: đã trong main.py
       + min_max_normalize.py file riêng
-      + độ trung bình tuyệt đối: chưa có
+      + độ trung bình tuyệt đối do_tb_tuyet_doi_normalize.py (đã thêm)
       + decimalScaling: chưa có
  - Ngoài ra có thể xem thêm các ảnh cách trình bày trong thư mục img cho đầy đủ
