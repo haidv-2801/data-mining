@@ -27,3 +27,5 @@ if __name__ == '__main__':
         print("Không có tương quan")
     else:
         print("Tương quan thuận")
+
+    print("Note: Xem thêm ảnh tuong_quan.jpg để trình bày")
