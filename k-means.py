@@ -18,9 +18,9 @@ def read_file(file):
 
 def dis(x, y):
     # mahatan
-    return round(m.fabs(x[0] - y[0]) + m.fabs(x[1] - y[1]), 2)
+    # return round(m.fabs(x[0] - y[0]) + m.fabs(x[1] - y[1]), 2)
     # khoang cach
-    # return m.sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
+    return m.sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
 
 
 def equal(x, y):

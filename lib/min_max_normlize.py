@@ -5,6 +5,7 @@ from prettytable import PrettyTable
 x = [ 200, 300, 400, 600, 1000]
 new_min = 0
 new_max = 1
+#end
 
 # tạo bảng
 cols = ["T"] + [str(i + 1) for i in range(len(x))]
