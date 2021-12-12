@@ -3,7 +3,7 @@ import numpy as np
 # không sort nhé các con vợ
 a = [9.1, 4.5, 5.3, 6.7, 6.5, 7.0, 6.0, 5.5, 7.0, 7.0, 8.5, 8.6]
 b = [8.5, 5.5, 6.0, 7.5, 8.5, 6.0, 6.5, 6.8, 9.0, 7.2, 8.0, 8.5]
-r = 3
+r = 10 # làm tròn 10 chữ số sau dấu phẩy
 
 n = len(a)
 avg_a = round(np.average(a), r)
@@ -13,8 +13,8 @@ nuy_b = round(np.sqrt(1 / n * sum([i ** 2 for i in b]) - avg_b ** 2), r)
 
 if __name__ == '__main__':
     print("n: ", n)
-    print("a : ", a)
-    print("b : ", b)
+    print("a: ", a)
+    print("b: ", b)
     print("mean_a: ", avg_a)
     print("mean_b: ", avg_b)
     print("nuy_a: ", nuy_a)
