@@ -19,8 +19,18 @@ def read_file(file):
 def dis(x, y):
     # mahatan
     # return round(m.fabs(x[0] - y[0]) + m.fabs(x[1] - y[1]), 2)
-    # khoang cach
-    return m.sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
+
+    # Chebyshev
+    # return max(m.fabs(x[0] - y[0]), m.fabs(x[1] - y[1]))
+
+    # minkowski
+    # =POWER(POWER(ABS(B3 -$B$1), $F$1)+POWER(ABS(C3 -$C$1), $F$1), (1 /$F$1))
+    p = 3
+    return (m.fabs(x[0] - y[0]) ** p + m.fabs(x[1] - y[1]) ** p) ** (1.0/p)
+
+    # khoang cach euclide
+    # return m.sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
+
 
 
 def equal(x, y):
