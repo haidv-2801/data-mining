@@ -1,7 +1,8 @@
  - Những file có thể chạy riêng
-    + main.py (bao gồm gần như bài  1 trong đề thi)
+    + main.py (bao gồm gần như bài 1 trong đề thi)
       + đã bao gồm kpdl.py bên trong
       + đã bao gồm bin.py bên trong
+    + scatter_plot.py (vẽ biểu đồ scatter)   
     + k-means.py
       + file đầu vào: kmeans_data.txt
     + bin.py (làm trơn thùng)
