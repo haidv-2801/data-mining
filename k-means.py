@@ -38,6 +38,7 @@ if __name__ == '__main__':
     _list = read_file(FILE_NAME)
     id = 1
     while 1:
+        print("\nLan lap", id)
         id += 1
         tb = PrettyTable()
         tb.field_names = ['STT'] + [str(str(i + 1) + '(' + str(x[0]) + ',' + str(x[1]) + ')') for i, x in
@@ -74,9 +75,9 @@ if __name__ == '__main__':
             xs = round(np.average(np.array([x[0] for x in item])), 2)
             ys = round(np.average(np.array([x[1] for x in item])), 2)
             print(
-                "Cụm {0}:{1}".format(index + 1, ','.join(
-                    [str(str(index + 1) + '(' + str(x[0]) + ',' + str(x[1]) + ')') for index, x in
-                     enumerate(item)])) + "=({0},{1})".format(xs, ys))
+                "Cụm {0}: {1}".format(index + 1, '; '.join(
+                    [str('(' + str(x[0]) + ', ' + str(x[1]) + ')') for index, x in
+                     enumerate(item)])) + " = ({0}, {1})".format(xs, ys))
             new_n.append((xs, ys))
         # new_n = sorted(new_n)
 
