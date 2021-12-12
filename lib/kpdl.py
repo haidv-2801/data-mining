@@ -139,10 +139,10 @@ class KPDL:
 
     def bin_smoothing(selfs):
         print("equal frequency binning(depth)".upper())
-        b.equifreq(selfs.x_sorted, 3)
+        b.equifreq(selfs.x_sorted, selfs.bin)
 
         print("\n\nequal width binning(width)".upper())
-        b.equiwidth(selfs.x_sorted, 3)
+        b.equiwidth(selfs.x_sorted, selfs.bin)
 
     def run(self):
         print(str("-" * 50) + "begin " + self.name + str("-" * 50))
