@@ -90,7 +90,7 @@ class KPDL:
             "+) Minimun = Q1-1.5*IQR = {Q1}-1.5*{IQR} = {minimum}, Maximun = Q3+ 1.5*IQR = {Q3}+1.5*{IQR} = {maximum}".format(
                 minimum=minimum, maximum=maximum, Q1=Q1, Q3=Q3, IQR=IQR))
         print("+) Biểu đồ boxplot")
-        ngoai_lai = [i if i < _min or i > _max else None for i in self.x]
+        ngoai_lai = [i if i < minimum or i > maximum else None for i in self.x]
 
         def _func(x):
             return x != None
@@ -100,20 +100,6 @@ class KPDL:
             print("+) Không có ngoại lai")
         else:
             print("Ngoại lai:", ngoai_lai)
-
-        # np.random.seed(10)
-        # data = np.random.normal(100, 20, 200)
-        #
-        # fig = plt.figure(figsize=(10, 7))
-        #
-        # # Creating plot
-        # plt.boxplot(data)
-        # img = mpimg.imread('boxplot.png')
-        # imgplot = plt.imshow(img)
-        # plt.show()
-
-        # show plot
-        # plt.show()
 
     def z_score(self):
         print("Ta có:")

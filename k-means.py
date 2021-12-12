@@ -25,11 +25,11 @@ def dis(x, y):
 
     # minkowski
     # =POWER(POWER(ABS(B3 -$B$1), $F$1)+POWER(ABS(C3 -$C$1), $F$1), (1 /$F$1))
-    p = 3
-    return (m.fabs(x[0] - y[0]) ** p + m.fabs(x[1] - y[1]) ** p) ** (1.0/p)
+    # p = 3
+    # return (m.fabs(x[0] - y[0]) ** p + m.fabs(x[1] - y[1]) ** p) ** (1.0/p)
 
     # khoang cach euclide
-    # return m.sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
+    return m.sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
 
 
 
