@@ -127,8 +127,8 @@ class KPDL:
         print("equal frequency binning(depth)".upper())
         b.equifreq(selfs.x_sorted, selfs.bin)
 
-        print("\n\nequal width binning(width)".upper())
-        b.equiwidth(selfs.x_sorted, selfs.bin)
+        # print("\n\nequal width binning(width)".upper())
+        # b.equiwidth(selfs.x_sorted, selfs.bin)
 
     def run(self):
         print(str("-" * 50) + "begin " + self.name + str("-" * 50))
@@ -142,7 +142,7 @@ class KPDL:
         print("\nb) Vẽ biểu đồ boxplot:")
         self.box_plot()
         print("\nc) Chuẩn z-scrore:")
-        self.z_score()
+        # self.z_score()
         print("\nc) Bin:")
         self.bin_smoothing()
         print("\ne) Mối tương quan giữa x và y(xem ảnh tuong_quan.jpg):")

@@ -18,7 +18,7 @@ def read_file(file):
 
 def dis(x, y):
     # mahatan
-    # return round(m.fabs(x[0] - y[0]) + m.fabs(x[1] - y[1]), 2)
+    return round(m.fabs(x[0] - y[0]) + m.fabs(x[1] - y[1]), 2)
 
     # Chebyshev
     # return max(m.fabs(x[0] - y[0]), m.fabs(x[1] - y[1]))
@@ -29,8 +29,7 @@ def dis(x, y):
     # return (m.fabs(x[0] - y[0]) ** p + m.fabs(x[1] - y[1]) ** p) ** (1.0/p)
 
     # khoang cach euclide
-    return m.sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
-
+    # return m.sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
 
 
 def equal(x, y):
@@ -42,7 +41,7 @@ def equal(x, y):
 
 if __name__ == '__main__':
 
-    n = ([(2, 10), (5, 8), (1, 2)])
+    n = ([(5 ,3), (10 ,15)])
     new_n = copy.copy(n)
     new_n.append((99999, 999999))
     _list = read_file(FILE_NAME)
