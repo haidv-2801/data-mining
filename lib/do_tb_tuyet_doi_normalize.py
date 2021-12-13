@@ -2,7 +2,8 @@ import numpy as np
 from prettytable import PrettyTable
 
 # sửa các tham số ở đây
-x = [200, 300, 400, 600, 1000]
+# x = [4.9, 4.6, 5.7, 5.4, 7, 4.5, 5.5, 6.5, 6.1, 5.3, 5, 5.1]
+x = [3, 3.1, 4.4, 3.9, 3.2, 2.3, 3.5, 2.8, 2.8, 3.7, 3.3, 3.5]
 # end
 
 mean = np.average(x)
